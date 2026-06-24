@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Mobile Shooter IO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui-overlay">
+        <div id="scoreboard">
+            <h3>Leaderboard</h3>
+            <ul id="score-list"></ul>
+        </div>
+        <div id="stats">HP: <span id="hp-val">100</span> | Score: <span id="score-val">0</span></div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Virtual Joysticks UI -->
+    <div id="joystick-container">
+        <div id="left-joystick-zone" class="joystick-zone">
+            <div id="left-joystick-base" class="base">
+                <div id="left-joystick-stick" class="stick"></div>
+            </div>
+        </div>
+        <div id="right-joystick-zone" class="joystick-zone">
+            <div id="right-joystick-base" class="base">
+                <div id="right-joystick-stick" class="stick"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="joystick.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
